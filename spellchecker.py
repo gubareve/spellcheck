@@ -14,18 +14,9 @@ try:
     
     def convert(lst):                     #just stuff cause json sucks
         return (lst[0].split())
-    print("Do you want to use a big or small dictionary? (b, s)")
-    if (input(">> ") == "s"):
-        with open("dict.json", "r") as f:
-          jsontext = json.load(f)
-        words = jsontext["commonWords"]
-    else:
-        print()
-        print("Please go to:")
-        print("https://gist.githubusercontent.com/gubareve/fb296a51084546fdf8ad8e0a035f2a49/raw/a4b0354d871a6e9b704fc55d82fd483e823862da/dict.txt")
-        print("And copy and paste the text into the input below.")
-        words = eval(input(">> "))
-        print("\n" * 100)
+    with open("dict.json", "r") as f:
+        jsontext = json.load(f)
+    words = jsontext
     print()
     print("Enter the text you want to spellcheck:")
     textstring = input(">> ")
@@ -91,7 +82,7 @@ try:
     print("##       RESULTS        ")
     print("##  %" + str(percent) + " Correct")
     print("#########################")
-except:
+except Exception as e:
     print()
     print()
-    print("Sorry, a Error Happened")
+    print(f"Sorry, a Error Happened {e}")
