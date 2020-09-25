@@ -3,6 +3,8 @@ A simple spellchecker written in python.
 
 ## Usage
 
+You can run this program online [here](https://colab.research.google.com/github/gubareve/spellcheck/blob/master/Spellcheck.ipynb).
+
 When you run the program it will look like this:
 
 ```
